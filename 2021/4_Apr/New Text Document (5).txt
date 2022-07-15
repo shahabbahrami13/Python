@@ -1,0 +1,44 @@
+import tkinter as tk
+def f():
+    print(v.get())
+root = tk.Tk()
+
+v = tk.StringVar()
+v.set("Perl")
+
+
+tk.Label(root, 
+        text="""Choose a 
+programming language:""",
+        justify = tk.LEFT,
+        padx = 20,
+        font=(30,), 
+         ).pack()
+
+tk.Radiobutton(root, 
+               text="Python",
+               padx = 20, 
+               variable=v, 
+                font=(30,),
+               command=f,
+               value="Python").pack(anchor=tk.SW)
+
+tk.Radiobutton(root, 
+               text="Perl",
+               padx = 20, 
+               variable=v, 
+               font=(30,),
+               command=f,
+               value="Perl").pack(anchor=tk.SW)
+
+tk.Radiobutton(root, 
+               text="Java",
+               padx = 20, 
+               variable=v, 
+               font=(30,),
+               command=f,
+               value="Java").pack(anchor=tk.SW)
+
+
+
+root.mainloop()
